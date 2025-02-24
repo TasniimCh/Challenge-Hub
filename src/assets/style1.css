@@ -1,0 +1,133 @@
+/* Panneau gauche */
+.left_pannel {
+    background-color: #E7ECF1;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+  
+  .left_pannel h1 {
+    font-family: 'Sail', sans-serif;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Champs de texte */
+  .left_pannel input[type="text"],
+  .left_pannel input[type="password"] {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Bouton Se connecter */
+  .btn1 {
+    padding: 15px 30px;
+    background-color: #4046C9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    outline: none;
+    font-weight: bold;
+    margin-top: 20px; /* Espacement pour que le bouton soit séparé des autres éléments */
+  }
+  
+  /* Message d'erreur */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+  }
+/* Panneau droit */
+.right_pannel {
+    background-color: #D3E0E8;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    padding: 20px;
+  }
+  
+  /* Texte principal */
+  .right_pannel h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Texte d'invitation */
+  .right_pannel p {
+    font-family: 'Tapestry', cursive;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Espacement entre les deux lignes */
+  .right_pannel p span {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Cercle décoratif */
+  .cercle, .cercle1 {
+    background-color: #D8E5ED;
+    border-radius: 50%;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+  }
+  
+  .cercle {
+    width: 400px;
+    height: 240px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .cercle1 {
+    width: 650px;
+    height: 350px;
+    bottom: -175px;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+  }
+  
+  /* Bouton d'inscription */
+  .btn {
+    padding: 15px 30px;
+    background-color: #4046C9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    outline: none;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+    
