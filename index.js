@@ -1,6 +1,7 @@
 const express = require('express');
 const authRoutes = require('./routes/authRoutes'); // Importe authRoutes
 const challengeRoutes = require('./routes/challengeRoutes');
+const participationRoutes = require('./routes/participationRoutes')
 const cors = require('cors');
 const app = express();
 
@@ -12,6 +13,8 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/challenges', challengeRoutes);
+app.use('/patricipation',participationRoutes)
+
 const PORT = process.env.PORT || 3000;
 if(require.main=== module){
   app.listen(PORT, () => {
