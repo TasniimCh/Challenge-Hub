@@ -52,16 +52,7 @@ const authController = {
         return res.status(400).json({ message: 'Username/email and password are required' });
       }
 
-      // Vérifier que le mot de passe est une chaîne de caractères
-      if (typeof motdepasse !== 'string') {
-        return res.status(400).json({ message: 'Password must be a string' });
-      }
-
-      // Vérifier que le mot de passe n'est pas vide
-      if (!motdepasse.trim()) {
-        return res.status(400).json({ message: 'Password cannot be empty' });
-      }
-
+   
       // Log pour vérifier le mot de passe avant d'envoyer à la base de données
       console.log('Password before hashing:', motdepasse);
 
@@ -71,13 +62,13 @@ const authController = {
         [username, email]
       );
 
-      if (userExists.rows.length > 0) {
+      if (userExists?.rows?.length > 0) {
         return res.status(400).json({ message: 'Username or email already exists' });
       }
 
       // Hacher le mot de passe
-      const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash(motdepasse, salt);
+     
+      const hashedPassword = await bcrypt.hash(motdepasse, 10);
 
       // Log pour vérifier que le mot de passe est bien haché
       console.log('Hashed Password:', hashedPassword);

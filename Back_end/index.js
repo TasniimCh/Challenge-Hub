@@ -1,6 +1,7 @@
 const express = require('express');
 const authRoutes = require('../Back_end/routes/authRoutes'); // Importe authRoutes
 const challengeRoutes = require('../Back_end/routes/challengeRoutes');
+const participationRoutes = require('./routes/participationRoutes')
 const cors=require('cors');
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-
+app.use('/participations',participationRoutes)
 app.use('/auth', authRoutes);
 app.use('/challenges', challengeRoutes);
 const PORT = process.env.PORT || 3000;
